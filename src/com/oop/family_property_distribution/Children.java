@@ -18,9 +18,9 @@ public class Children {
 	}
 	
 	public void displayChildren() {
-		System.out.println("Name of the child " + this.name);
-		System.out.println("Age of the child " + this.age);
-		System.out.println("Gender of the child " + this.gender);
+		System.out.println("Name of the child: " + this.name);
+		System.out.println("Age of the child: " + this.age);
+		System.out.println("Gender of the child: " + this.gender);
 	}
 	
 	

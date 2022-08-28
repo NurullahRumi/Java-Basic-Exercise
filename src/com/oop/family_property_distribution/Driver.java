@@ -1,6 +1,6 @@
 package com.oop.family_property_distribution;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Driver {
 
@@ -8,7 +8,6 @@ public class Driver {
 		String fatherName;
 		double totLand;
 		int totChildren;
-		
 		
 		try (// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in)) {
@@ -18,35 +17,56 @@ public class Driver {
 			totLand = in.nextDouble();
 			System.out.println("How many children your father have?");
 			totChildren = in.nextInt();
+			
+			
+//			int intArray[] = new int[totChildren];
+//			String childName[] = new String[totChildren];
+//			int childAge[] = new int[totChildren];
+//			String childGender[] = new String[totChildren];
+//			 
+//			List<Children> listChildren = new ArrayList <Children>();
+			
+//			for(int i = 0; i<intArray.length; i++) {
+//				System.out.println("Input the child name " + (i+1));
+//				childName[i] = in.next();
+//				System.out.println("Input the child age " + (i+1));
+//				childAge[i] = in.nextInt();
+//				System.out.println("Input the child gender " + (i+1));
+//				childGender[i] = in.next();
+//				Children children = new Children(childName[i], childAge[i], childGender[i]);
+//				listChildren.add(children);
+//				System.out.println(children.count);
+//			}
+			
+			System.out.println();
+			System.out.println("Your father name is: " + fatherName);
+			System.out.println("Your father have total " + totLand + " katha land.");
+			System.out.println("Your father have total " + totChildren + " childrens.");
+			System.out.println();
+			
+//			for(int k = 0; k<intArray.length; k++) {
+//				System.out.println();
+//				listChildren.get(k).displayChildren();
+//				if(childGender[k] == "Male") {
+//					System.out.format("Land get %.2f", 2 * listChildren.get(k).calLand(totLand));
+//				}else {
+//					System.out.format("%.2f",listChildren.get(k).calLand(totLand));
+//				}
+//				System.out.println();
+//			}
+			
+			Children children1 = new Children("Nahid",32,"Male");
+			Children children2 = new Children("Munni",27,"Female");
+			Children children3 = new Children("Tinni",19,"Female");
+			
+			children1.displayChildren();
+			System.out.format("Land get %.2f", 2 * children1.calLand(totLand));
+			children2.displayChildren();
+			System.out.format("Land get %.2f", children2.calLand(totLand));
+			children3.displayChildren();
+			System.out.format("Land get %.2f", children3.calLand(totLand));
+			
 			}
-		
-		
-		System.out.println();
-		System.out.println("Your father name is: " + fatherName);
-		System.out.println("Your father have total " + totLand + " katha land.");
-		System.out.println("Your father have total " + totChildren + " childrens.");
-		System.out.println();
-		
-		Children children1 = new Children("Lucky", 48, "Female");
-		Children children2 = new Children("Laily", 44, "Female");
-		Children children3 = new Children("Papia", 39, "Female");
-		Children children4 = new Children("Wali", 34, "Male");
-		
-		children1.displayChildren();
-		System.out.format("%.2f",children1.calLand(totLand));
-		System.out.println();
-		
-		children2.displayChildren();
-		System.out.format("%.2f",children2.calLand(totLand));
-		System.out.println();
-		
-		children3.displayChildren();
-		System.out.format("%.2f",children3.calLand(totLand));
-		System.out.println();
-		
-		children4.displayChildren();
-		System.out.format("%.2f", 2 * children3.calLand(totLand));
-		System.out.println();
 		
 	}
 

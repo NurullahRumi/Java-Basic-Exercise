@@ -33,11 +33,7 @@ public class Driver {
 				childAge[i] = in.nextInt();
 				System.out.println("Input the child gender " + (i+1));
 				childGender[i] = in.next();
-				
-			}
-			
-			for(int j=0;j<intArray.length;j++) {
-				Children children = new Children(childName[j], childAge[j], childGender[j]);
+				Children children = new Children(childName[i], childAge[i], childGender[i]);
 				listChildren.add(children);
 			}
 			
@@ -51,7 +47,7 @@ public class Driver {
 			for(int k = 0; k<intArray.length; k++) {
 				System.out.println();
 				listChildren.get(k).displayChildren();
-				if(childGender[k] == "Male") {
+				if(childGender[k].equals("Male")) {
 					System.out.format("Land get %.2f", 2 * listChildren.get(k).calLand(totLand));
 				}else {
 					System.out.format("%.2f",listChildren.get(k).calLand(totLand));
@@ -59,21 +55,7 @@ public class Driver {
 				System.out.println();
 			}
 			
-			
-			
-			// Below code is working fine
-//			Children children1 = new Children("Nahid",32,"Male");
-//			Children children2 = new Children("Munni",27,"Female");
-//			Children children3 = new Children("Tinni",19,"Female");
-//			
-//			children1.displayChildren();
-//			System.out.format("Land get %.2f", 2 * children1.calLand(totLand));
-//			children2.displayChildren();
-//			System.out.format("Land get %.2f", children2.calLand(totLand));
-//			children3.displayChildren();
-//			System.out.format("Land get %.2f", children3.calLand(totLand));
-			
-			}
+		}
 		
 	}
 

@@ -10,7 +10,7 @@ public class Children {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
-		if(this.gender == "Male") {
+		if(this.gender.equals("Male")) {
 			count = count + 2;
 		}else {
 			count++;

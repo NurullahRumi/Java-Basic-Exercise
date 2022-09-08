@@ -47,7 +47,7 @@ public class Driver {
 			for(int k = 0; k<intArray.length; k++) {
 				System.out.println();
 				listChildren.get(k).displayChildren();
-				if(childGender[k].equals("Male")) {
+				if(childGender[k].equalsIgnoreCase("Male")) {
 					System.out.format("Land get %.2f", 2 * listChildren.get(k).calLand(totLand));
 				}else {
 					System.out.format("%.2f",listChildren.get(k).calLand(totLand));

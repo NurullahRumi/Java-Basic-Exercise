@@ -1,6 +1,11 @@
 package com.oop.test;
 
 public class Dog extends Canine implements Pet{
+	Cat cat = new Cat();
+	
+	public void go() {
+		cat = null;
+	}
 	
 	Dog(String name) {
 		super(name); // calling the superclass constructor

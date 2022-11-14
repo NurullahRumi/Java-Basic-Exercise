@@ -13,22 +13,25 @@ public class JunkBox1 {
 		List<Song> songs = MockSongs.getSongs();
 		System.out.println(songs);
 		
-		songs.sort(new Comparator<Song>() {   // Inner Class
-
-			@Override
-			public int compare(Song o1, Song o2) {
-				return o1.getTitle().compareTo(o2.getTitle());
-			}
-		});
+//		songs.sort(new Comparator<Song>() {   // Inner Class
+//
+//			@Override
+//			public int compare(Song o1, Song o2) {
+//				return o1.getTitle().compareTo(o2.getTitle());
+//			}
+//		});
+		songs.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
 		
 		System.out.println(songs);
 		
-		songs.sort(new Comparator<Song>() {
-			@Override
-			public int compare(Song o1, Song o2) {
-				return o1.getArtist().compareTo(o2.getArtist());
-			}
-		});
+//		songs.sort(new Comparator<Song>() {
+//			@Override
+//			public int compare(Song o1, Song o2) {
+//				return o1.getArtist().compareTo(o2.getArtist());
+//			}
+//		});
+		
+		songs.sort((one, two) -> one.getArtist().compareTo(two.getArtist()));
 		
 		System.out.println(songs);
 	}

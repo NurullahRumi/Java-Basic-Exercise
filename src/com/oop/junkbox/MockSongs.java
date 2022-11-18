@@ -11,6 +11,7 @@ public class MockSongs {
 		songs.add(new Song("akta gupon kotha","Topu",4.52));
 		songs.add(new Song("3 din tor barit","Momotaz",3.52));
 		songs.add(new Song("haaste dekho gaite dekho","LRB",5.52));
+		songs.add(new Song("haaste dekho gaite dekho","LRB",5.52));
 		return songs;
 	}
 }

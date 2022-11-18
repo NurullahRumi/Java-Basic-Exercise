@@ -39,6 +39,16 @@ public class Song{
 	public String toString() {
 		return title;
 	}
-
+	
+	@Override
+	public boolean equals(Object o ) {
+		Song other = (Song) o;
+		return getTitle().equals(other.getTitle());
+	}
+	
+	@Override
+	public int hashCode() {
+		return title.hashCode();
+	}
 	
 }

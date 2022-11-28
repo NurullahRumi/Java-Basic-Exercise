@@ -1,38 +1,38 @@
 package com.oop.junkbox;
 
 public class Song{
-	private String title;
-	private String artist;
-	private double duration;
+	private final String title;
+	private final String artist;
+	private final String genre;
+	private final int year;
+	private final int timesPlayed;
 	
-	public Song(String title, String artist, double duration) {
+	public Song(String title, String artist, String genre, int year, int timesPlayed) {
 		this.title = title;
 		this.artist = artist;
-		this.duration = duration;
+		this.genre = genre;
+		this.year = year;
+		this.timesPlayed = timesPlayed;
 	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public String getArtist() {
 		return artist;
 	}
-
-	public void setArtist(String artist) {
-		this.artist = artist;
+	
+	public String getGenre() {
+		return genre;
 	}
 
-	public double getDuration() {
-		return duration;
+	public int getYear() {
+		return year;
 	}
 
-	public void setDuration(float duration) {
-		this.duration = duration;
+	public int getTimesPlayed() {
+		return timesPlayed;
 	}
 	
 	@Override

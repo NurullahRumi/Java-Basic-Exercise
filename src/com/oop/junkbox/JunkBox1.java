@@ -25,6 +25,13 @@ public class JunkBox1 {
 		System.out.println(onlyRockSongs);
 		
 		
+		List<String> genres = songs.stream().map(s -> s.getGenre()).distinct().collect(Collectors.toList());
+		System.out.println(genres);
+		
+		String songTitle = "With the Little help from My Friends";
+		List<String> result = songs.stream().filter(s->s.getTitle().equals(songTitle)).map(s->s.getArtist()).filter(artist->!artist.equals("Joe Cocker")).collect(Collectors.toList());
+		System.out.println(result);
+		
 //		songs.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
 //		System.out.println(songs);
 //		
